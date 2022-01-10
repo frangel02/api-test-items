@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "87323a99-840f-4ca0-8162-632717ad168a",
+		"name": "ApplaudoApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/app/api/v1/items",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\n\"itemId\":1,\n \"itemName\": \"Frangel rodriguez\",\n \"itemBuyingPrice\": 25,\n \"itemSellingPrice\": 30,\n \"itemEnteredByUser\":\"User Root\",\n \"itemLastModifiedByUser\":\"admin\"\n\n\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/app/api/v1/item",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"api",
+						"v1",
+						"item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/app/api/v1/items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/app/api/v1/item",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"api",
+						"v1",
+						"item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/app/api/v1/item/28",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/app/api/v1/item/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"api",
+						"v1",
+						"item",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/app/api/v1/item?ItemName=Frangel&itemStatus=AVAILABLE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/app/api/v1/item/items?itemStatus=AVAILABLE&itemName=Frangel rodriguez",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"api",
+						"v1",
+						"item",
+						"items"
+					],
+					"query": [
+						{
+							"key": "itemStatus",
+							"value": "AVAILABLE"
+						},
+						{
+							"key": "itemName",
+							"value": "Frangel rodriguez"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
